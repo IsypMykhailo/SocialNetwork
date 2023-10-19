@@ -6,20 +6,20 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <title>Winku Social Network Toolkit</title>
-    <link rel="icon" href="{{asset('images/fav.png')}}" type="image/png" sizes="16x16">
+    <link rel="icon" href="{{asset('/images/fav.png')}}" type="image/png" sizes="16x16">
 
     <!-- Scripts -->
-    <!--<script src="{{ asset('js/app.js') }}" defer></script>-->
+    <!--<script src="{{ asset('/js/app.js') }}" defer></script>-->
 
-    <link rel="stylesheet" href="{{asset('css/main.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('css/color.css')}}">
-    <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/main.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/color.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/responsive.css')}}">
 
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">-->
 
     <!-- Styles -->
-    <!--<link href="{{ asset('css/app.css') }}" rel="stylesheet">-->
+    <!--<link href="{{ asset('/css/app.css') }}" rel="stylesheet">-->
 
     <!-- Scripts -->
     <!--@vite(['resources/sass/app.scss', 'resources/js/app.js'])-->
