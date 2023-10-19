@@ -7,7 +7,7 @@
     <section>
         <div class="feature-photo">
             <figure><img
-                    src="{{asset('/storage/'.User::query()->where('username', $username)->first()->profile->profileBackground)}}"
+                    src="{{secure_asset('/storage/'.User::query()->where('username', $username)->first()->profile->profileBackground)}}"
                     alt=""></figure>
             <div class="add-btn">
                 @if(User::query()->where('username', $username)->first()->followers !== null)
@@ -50,7 +50,7 @@
                         <div class="user-avatar">
                             <figure>
                                 <img
-                                    src="{{asset('/storage/'.User::query()->where('username', $username)->first()->avatar)}}"
+                                    src="{{secure_asset('/storage/'.User::query()->where('username', $username)->first()->avatar)}}"
                                     alt="">
                                 @if(Auth::user()->username === $username)
                                     <form class="edit-phto" id="editAvatar" method="POST"

@@ -89,7 +89,7 @@
                                             @foreach(\App\Models\Follower::query()->where('user_id', Auth::user()->id)->get() as $follower)
                                                 @if(\App\Models\Follower::query()->where('user_id', $follower->follower->id)->where('follower_id', Auth::user()->id)->first() === null)
                                             <li id="liFollow{{$follower}}">
-                                                <figure><img src="{{asset('/storage/'.$follower->follower->avatar)}}" alt=""></figure>
+                                                <figure><img src="{{secure_asset('/storage/'.$follower->follower->avatar)}}" alt=""></figure>
                                                 <div class="friend-meta">
                                                     <h4><a href="{{url('/'.$follower->follower->username)}}" title="">{{$follower->follower->name}}</a></h4>
                                                     <form id="formFollow{{$follower->follower->username}}" method="post" action="{{url('/'.$follower->follower->username.'/follow')}}">
@@ -132,14 +132,14 @@
 {{--                                        <div class="user-post">--}}
 {{--                                            <div class="friend-info">--}}
 {{--                                                <figure>--}}
-{{--                                                    <img src="{{asset('/storage/'.User::query()->where('id', $publication->user_id)->first()->avatar)}}" alt="">--}}
+{{--                                                    <img src="{{secure_asset('/storage/'.User::query()->where('id', $publication->user_id)->first()->avatar)}}" alt="">--}}
 {{--                                                </figure>--}}
 {{--                                                <div class="friend-name">--}}
 {{--                                                    <ins><a href="{{url('/'.User::query()->where('id', $publication->user_id)->first()->username)}}" title="">{{User::query()->where('id', $publication->user_id)->first()->name}}</a></ins>--}}
 {{--                                                    <span>{{$publication->created_at}}</span>--}}
 {{--                                                </div>--}}
 {{--                                                <div class="post-meta">--}}
-{{--                                                    <img src="{{asset('/storage/'.$publication->image)}}" alt="">--}}
+{{--                                                    <img src="{{secure_asset('/storage/'.$publication->image)}}" alt="">--}}
 {{--                                                    <div class="we-video-info">--}}
 {{--                                                        <ul>--}}
 {{--                                                            <li id="liLike" class="mr-0">--}}
@@ -271,7 +271,7 @@
 {{--                                                            <li>--}}
 {{--                                                                <div class="comet-avatar">--}}
 {{--                                                                    <img--}}
-{{--                                                                        src="{{asset('/storage/'.$comment->user->avatar)}}"--}}
+{{--                                                                        src="{{secure_asset('/storage/'.$comment->user->avatar)}}"--}}
 {{--                                                                        alt="">--}}
 {{--                                                                </div>--}}
 {{--                                                                <div class="we-comment">--}}
@@ -295,7 +295,7 @@
 {{--                                                                <li>--}}
 {{--                                                                    <div class="comet-avatar">--}}
 {{--                                                                        <img--}}
-{{--                                                                            src="{{asset('/storage/'.$comment->user->avatar)}}"--}}
+{{--                                                                            src="{{secure_asset('/storage/'.$comment->user->avatar)}}"--}}
 {{--                                                                            alt="">--}}
 {{--                                                                    </div>--}}
 {{--                                                                    <div class="we-comment">--}}
@@ -351,7 +351,7 @@
 {{--                                                                            if (response.success) {--}}
 {{--                                                                                comments.innerHTML += '<li>'+--}}
 {{--                                                                                    '<div class="comet-avatar">'+--}}
-{{--                                                                                        '<img src="{{asset('/storage/'.Auth::user()->avatar)}}" alt="">'+--}}
+{{--                                                                                        '<img src="{{secure_asset('/storage/'.Auth::user()->avatar)}}" alt="">'+--}}
 {{--                                                                                    '</div>'+--}}
 {{--                                                                                    '<div class="we-comment">'+--}}
 {{--                                                                                        '<div class="coment-head">'+--}}
@@ -383,14 +383,14 @@
                                                 <div class="user-post">
                                                     <div class="friend-info">
                                                         <figure>
-                                                            <img src="{{asset('/storage/'.User::query()->where('id', $publication->user_id)->first()->avatar)}}" alt="">
+                                                            <img src="{{secure_asset('/storage/'.User::query()->where('id', $publication->user_id)->first()->avatar)}}" alt="">
                                                         </figure>
                                                         <div class="friend-name">
                                                             <ins><a href="{{url('/'.User::query()->where('id', $publication->user_id)->first()->username)}}" title="">{{User::query()->where('id', $publication->user_id)->first()->name}}</a></ins>
                                                             <span>{{$publication->created_at}}</span>
                                                         </div>
                                                         <div class="post-meta">
-                                                            <img src="{{asset('/storage/'.$publication->image)}}" alt="">
+                                                            <img src="{{secure_asset('/storage/'.$publication->image)}}" alt="">
                                                             <div class="we-video-info">
                                                                 <ul>
                                                                     <li id="liLike" class="mr-0">
@@ -522,7 +522,7 @@
                                                                         <li>
                                                                             <div class="comet-avatar">
                                                                                 <img
-                                                                                    src="{{asset('/storage/'.$comment->user->avatar)}}"
+                                                                                    src="{{secure_asset('/storage/'.$comment->user->avatar)}}"
                                                                                     alt="">
                                                                             </div>
                                                                             <div class="we-comment">
@@ -546,7 +546,7 @@
                                                                         <li>
                                                                             <div class="comet-avatar">
                                                                                 <img
-                                                                                    src="{{asset('/storage/'.$comment->user->avatar)}}"
+                                                                                    src="{{secure_asset('/storage/'.$comment->user->avatar)}}"
                                                                                     alt="">
                                                                             </div>
                                                                             <div class="we-comment">
@@ -602,7 +602,7 @@
                                                                                     if (response.success) {
                                                                                         comments.innerHTML += '<li>'+
                                                                                             '<div class="comet-avatar">'+
-                                                                                            '<img src="{{asset('/storage/'.Auth::user()->avatar)}}" alt="">'+
+                                                                                            '<img src="{{secure_asset('/storage/'.Auth::user()->avatar)}}" alt="">'+
                                                                                             '</div>'+
                                                                                             '<div class="we-comment">'+
                                                                                             '<div class="coment-head">'+
@@ -645,7 +645,7 @@
                                             @foreach(\App\Models\Follower::query()->where('user_id', Auth::user()->id)->get() as $follower)
                                                 @if(\App\Models\Follower::query()->where('user_id', $follower->follower->id)->where('follower_id', Auth::user()->id)->first() !== null)
                                                     <li>
-                                                        <figure><img src="{{asset('/storage/'.$follower->follower->avatar)}}" alt=""></figure>
+                                                        <figure><img src="{{secure_asset('/storage/'.$follower->follower->avatar)}}" alt=""></figure>
                                                         <div class="friend-meta">
                                                             <h4><a href="{{url('/'.$follower->follower->username)}}" title="">{{$follower->follower->name}}</a></h4>
                                                         </div>

@@ -15,13 +15,13 @@
                                 <i>winku inc</i>
                             </div>
                             <figure class="sign-author">
-                                <img src="{{asset('images/welcome-sign.png')}}" alt="">
+                                <img src="{{secure_asset('images/welcome-sign.png')}}" alt="">
                             </figure>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <figure class="about-picture">
-                            <img src="{{asset('images/resources/about-comapny.jpg')}}" alt="">
+                            <img src="{{secure_asset('images/resources/about-comapny.jpg')}}" alt="">
                         </figure>
                     </div>
                 </div>

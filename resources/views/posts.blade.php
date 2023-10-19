@@ -65,7 +65,7 @@
                                         <div class="new-postbox">
                                             <figure>
                                                 <img
-                                                    src="{{asset('/storage/'.User::query()->where('username',$username)->first()->avatar)}}"
+                                                    src="{{secure_asset('/storage/'.User::query()->where('username',$username)->first()->avatar)}}"
                                                     alt="">
                                             </figure>
                                             <div class="newpst-input">
@@ -101,7 +101,7 @@
                                                 <div class="friend-info">
                                                     <figure>
                                                         <img
-                                                            src="{{asset('/storage/'.User::query()->where('username',$username)->first()->avatar)}}"
+                                                            src="{{secure_asset('/storage/'.User::query()->where('username',$username)->first()->avatar)}}"
                                                             alt="">
                                                     </figure>
                                                     <div class="friend-name">
@@ -112,7 +112,7 @@
                                                     </div>
                                                     <div class="post-meta">
                                                         <img
-                                                            src="{{asset('/storage/'.$publication->image)}}"
+                                                            src="{{secure_asset('/storage/'.$publication->image)}}"
                                                             alt="">
                                                         <div class="we-video-info">
                                                             <ul>
@@ -269,7 +269,7 @@
                                                                     <li>
                                                                         <div class="comet-avatar">
                                                                             <img
-                                                                                src="{{asset('/storage/'.$comment->user->avatar)}}"
+                                                                                src="{{secure_asset('/storage/'.$comment->user->avatar)}}"
                                                                                 alt="">
                                                                         </div>
                                                                         <div class="we-comment">
@@ -293,7 +293,7 @@
                                                                     <li>
                                                                         <div class="comet-avatar">
                                                                             <img
-                                                                                src="{{asset('/storage/'.$comment->user->avatar)}}"
+                                                                                src="{{secure_asset('/storage/'.$comment->user->avatar)}}"
                                                                                 alt="">
                                                                         </div>
                                                                         <div class="we-comment">

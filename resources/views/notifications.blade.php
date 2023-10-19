@@ -9,7 +9,7 @@
     <section>
         <div class="feature-photo">
             <figure><img
-                    src="{{asset('/storage/'.Auth::user()->profile->profileBackground)}}"
+                    src="{{secure_asset('/storage/'.Auth::user()->profile->profileBackground)}}"
                     alt=""></figure>
             <div class="add-btn">
                 @if(Auth::user()->followers !== null)
@@ -33,7 +33,7 @@
                         <div class="user-avatar">
                             <figure>
                                 <img
-                                    src="{{asset('/storage/'.Auth::user()->avatar)}}"
+                                    src="{{secure_asset('/storage/'.Auth::user()->avatar)}}"
                                     alt="">
                                 <form class="edit-phto" id="editAvatar" method="POST"
                                       action="{{url('/' . Auth::user()->username . '/updateAvatar')}}" enctype="multipart/form-data">
@@ -125,9 +125,9 @@
                                             <ul>
                                                 @foreach(Auth::user()->unreadNotifications as $notification)
                                                 <li>
-                                                    <figure><img src="{{asset('/storage/'.$notification->data['reactionPlacer']['avatar'])}}" alt=""></figure>
+                                                    <figure><img src="{{secure_asset('/storage/'.$notification->data['reactionPlacer']['avatar'])}}" alt=""></figure>
                                                     <div class="notifi-meta">
-                                                        <p>{{$notification->data['message']}} @if($notification->data['post']['image']!=='')<img style="height:45px;" class="ml-2" src="{{asset('/storage/'.$notification->data['post']['image'])}}">@endif</p>
+                                                        <p>{{$notification->data['message']}} @if($notification->data['post']['image']!=='')<img style="height:45px;" class="ml-2" src="{{secure_asset('/storage/'.$notification->data['post']['image'])}}">@endif</p>
                                                         <span>{{$notification->created_at}}</span>
                                                     </div>
 

@@ -66,7 +66,7 @@
                                         <div class="centerBlock d-flex flex-column personal mb-4">
                                             @foreach($followers as $follower)
                                                 <p class="m-2" style="cursor:pointer;" onclick="window.location.href='{{url('/'.$follower->user->username)}}'">
-                                                    <img class="follower_img" src="{{asset('/storage/'.$follower->user->avatar)}}" align="middle">
+                                                    <img class="follower_img" src="{{secure_asset('/storage/'.$follower->user->avatar)}}" align="middle">
                                                     <span class="username">{{$follower->user->username}}</span><br>
                                                     <span>{{$follower->user->name}}</span>
                                                 </p>
