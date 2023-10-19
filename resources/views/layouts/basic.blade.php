@@ -6,15 +6,15 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <title>Winku Social Network Toolkit</title>
-    <link rel="icon" href="{{asset('/images/fav.png')}}" type="image/png" sizes="16x16">
+    <link rel="icon" href="{{secure_asset('/images/fav.png')}}" type="image/png" sizes="16x16">
 
     <!-- Scripts -->
     <script src="{{ asset('/js/app.js') }}" defer></script>
 
-    <link rel="stylesheet" href="{{asset('/css/main.min.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/color.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('/css/main.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('/css/style.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('/css/color.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('/css/responsive.css')}}">
 
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">-->
 
@@ -35,7 +35,7 @@
 				<a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
 			</span>
                 <span class="mh-text">
-				<a href="newsfeed.html" title=""><img src="{{asset('images/logo2.png')}}" alt=""></a>
+				<a href="newsfeed.html" title=""><img src="{{secure_asset('images/logo2.png')}}" alt=""></a>
 			</span>
                 <span class="mh-btns-right">
 				<a class="fa fa-sliders" href="#shoppingbag"></a>
@@ -52,7 +52,7 @@
 
         <div class="topbar stick">
             <div class="logo">
-                <a title="" href="{{url('/home')}}"><img src="{{asset('images/logo.png')}}" alt=""></a>
+                <a title="" href="{{url('/home')}}"><img src="{{secure_asset('images/logo.png')}}" alt=""></a>
             </div>
 
             <div class="top-area">
@@ -95,7 +95,7 @@
                     @endguest
                 </ul>
                 <!--<div class="user-img">
-                    <img src="{{asset('images/resources/admin.jpg')}}" alt="">
+                    <img src="{{secure_asset('images/resources/admin.jpg')}}" alt="">
                     <span class="status f-online"></span>
                     <div class="user-setting">
                         <a href="#" title=""><span class="status f-online"></span>online</a>
@@ -124,7 +124,7 @@
                         <div class="widget">
                             <div class="foot-logo">
                                 <div class="logo">
-                                    <a href="{{url('/home')}}" title=""><img src="{{asset('images/logo.png')}}" alt=""></a>
+                                    <a href="{{url('/home')}}" title=""><img src="{{secure_asset('images/logo.png')}}" alt=""></a>
                                 </div>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper eget nulla facilisi etiam dignissim diam quis.
@@ -169,7 +169,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <span class="copyright"><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></span>
-                        <i><img src="{{asset('images/credit-cards.png')}}" alt=""></i>
+                        <i><img src="{{secure_asset('images/credit-cards.png')}}" alt=""></i>
                     </div>
                 </div>
             </div>
@@ -239,9 +239,9 @@
         </form>
     </div><!-- side panel -->
 
-    <script data-cfasync="false" src="{{asset('../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script><script src="js/main.min.js"></script>
-    <script src="{{asset('js/script.js')}}"></script>
-    <script src="{{asset('js/map-init.js')}}"></script>
+    <script data-cfasync="false" src="{{secure_asset('../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js')}}"></script><script src="js/main.min.js"></script>
+    <script src="{{secure_asset('js/script.js')}}"></script>
+    <script src="{{secure_asset('js/map-init.js')}}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 </div>
 </body>
